@@ -8,7 +8,6 @@
     tools:context=".appInside.CrearPrestamoActivity">
 
     <Button
-        android:id="@+id/button3"
         android:layout_width="277dp"
         android:layout_height="270dp"
         android:layout_marginStart="200dp"
@@ -18,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
         android:layout_width="326dp"
         android:layout_height="313dp"
         android:layout_marginEnd="148dp"
@@ -28,7 +26,6 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button2"
         android:layout_width="512dp"
         android:layout_height="480dp"
         android:layout_marginTop="596dp"
@@ -37,7 +34,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtlabel"
         android:layout_width="191dp"
         android:layout_height="79dp"
         android:layout_marginTop="52dp"
@@ -63,7 +59,6 @@
         app:srcCompat="@drawable/uniminuto_logo" />
 
     <TextView
-        android:id="@+id/txtlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -77,7 +72,6 @@
         app:layout_constraintStart_toStartOf="@+id/spinnerDocentes" />
 
     <TextView
-        android:id="@+id/txtlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -91,7 +85,6 @@
         app:layout_constraintStart_toStartOf="@+id/spinnerImplementos" />
 
     <TextView
-        android:id="@+id/txtlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"

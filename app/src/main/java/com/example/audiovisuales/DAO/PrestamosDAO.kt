@@ -13,6 +13,7 @@ import com.example.audiovisuales.Entities.Encargados
 import com.example.audiovisuales.Entities.Implementos
 import com.example.audiovisuales.Entities.Prestamos
 import com.example.audiovisuales.Entities.PrestamosWithDetails
+import com.example.audiovisuales.appInside.reportes.ReportModels
 
 @Dao
 interface PrestamosDAO {
@@ -37,6 +38,24 @@ interface PrestamosDAO {
     @Transaction
     @Query("SELECT * FROM prestamos ORDER BY fechaHora DESC")
     fun seleccionarDetallesPrestamo(): List<PrestamosWithDetails>
+
+    @Query("""
+    SELECT CASE strftime('%w', datetime(substr(fechaHora, 7, 4) || '-' || substr(fechaHora, 4, 2) || '-' || substr(fechaHora, 1, 2) || substr(fechaHora, 11, 9)))
+        WHEN '0' THEN 'Domingo'
+        WHEN '1' THEN 'Lunes'
+        WHEN '2' THEN 'Martes'
+        WHEN '3' THEN 'Miércoles'
+        WHEN '4' THEN 'Jueves'
+        WHEN '5' THEN 'Viernes'
+        WHEN '6' THEN 'Sábado'
+        ELSE 'Desconocido'
+        END AS diaSemana, 
+        COUNT(*) AS cantidad
+    FROM prestamos
+    GROUP BY diaSemana
+""")
+    fun obtenerCantidadPrestamosPorDiasSemana(): List<ReportModels.PrestamoPorDia>
+
 
 }
 

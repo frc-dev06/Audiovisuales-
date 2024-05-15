@@ -8,7 +8,6 @@
     tools:context=".LoginActivity">
 
     <Button
-        android:id="@+id/button2"
         android:layout_width="326dp"
         android:layout_height="313dp"
         android:layout_marginEnd="148dp"
@@ -18,7 +17,6 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button3"
         android:layout_width="277dp"
         android:layout_height="270dp"
         android:layout_marginStart="196dp"
@@ -28,7 +26,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
         android:layout_width="512dp"
         android:layout_height="480dp"
         android:layout_marginTop="592dp"
@@ -37,7 +34,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -51,7 +47,6 @@
         app:layout_constraintStart_toStartOf="@+id/txtCedula" />
 
     <TextView
-        android:id="@+id/txtlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -65,7 +60,6 @@
         app:layout_constraintStart_toStartOf="@+id/txtContraseña" />
 
     <TextView
-        android:id="@+id/txtlabel"
         android:layout_width="191dp"
         android:layout_height="79dp"
         android:layout_marginTop="52dp"

@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.audiovisuales.MainActivity
 import com.example.audiovisuales.R
+import com.example.audiovisuales.appInside.reportes.ReportesMainActivity
 
 class primaryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,8 @@ class primaryActivity : AppCompatActivity() {
         val btnRegistrarDocente= findViewById<Button>(R.id.btnRegistroDocente);
         val btnRegistrarImplemento= findViewById<Button>(R.id.btnRegistroImplemento);
         val btnVerPrestamos= findViewById<Button>(R.id.btnPrestamos);
+        val btnReportes= findViewById<Button>(R.id.btnReportes);
+
 
         //traer nombre de usuario del activity anterior
         val txtHola= findViewById<TextView>(R.id.txtHola);
@@ -41,7 +44,9 @@ class primaryActivity : AppCompatActivity() {
         btnVerPrestamos.setOnClickListener {
             openPrestamos()
         }
-
+        btnReportes.setOnClickListener {
+            openReportes()
+        }
     }
 
     fun openRegistroDocente(){
@@ -56,6 +61,12 @@ class primaryActivity : AppCompatActivity() {
     }
     fun openPrestamos(){
         var intent= Intent(this, PrestamosMainActivity::class.java)
+        startActivity(intent)
+        this.finish()
+    }
+
+    fun openReportes(){
+        var intent= Intent(this, ReportesMainActivity::class.java)
         startActivity(intent)
         this.finish()
     }
