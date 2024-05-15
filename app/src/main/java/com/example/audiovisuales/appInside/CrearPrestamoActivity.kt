@@ -34,7 +34,7 @@ class CrearPrestamoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_crear_prestamo)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.containerRepoDoc)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -53,13 +53,15 @@ class CrearPrestamoActivity : AppCompatActivity() {
         GlobalScope.launch(Dispatchers.IO) {
             // Accede a la base de datos aquí
             val listaDocentes = db.docentesDao().seleccionarTodoDocentes().map { it.nombres }
-            val listaImplementos = db.implementosDao().seleccionarTodoImplementos().map { it.nombre }
+            val listaImplementos = db.implementosDao().seleccionarImplementosDisponibles().map { it.nombre }
+
 
             // Actualiza la interfaz de usuario en el hilo principal después de obtener los datos
             runOnUiThread {
                 // Configura los adaptadores de los spinners aquí
                 val adaptadorDocentes = createCustomSpinnerAdapter(this@CrearPrestamoActivity, listaDocentes)
                 spinnerDocentes.adapter = adaptadorDocentes
+                println("implmentos:::::$listaImplementos")
 
                 val adaptadorImplementos = createCustomSpinnerAdapter(this@CrearPrestamoActivity, listaImplementos)
                 spinnerImplementos.adapter = adaptadorImplementos

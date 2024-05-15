@@ -56,6 +56,22 @@ interface PrestamosDAO {
 """)
     fun obtenerCantidadPrestamosPorDiasSemana(): List<ReportModels.PrestamoPorDia>
 
+    @Query("""
+    SELECT docentes.nombres as nombreDocente, COUNT(prestamos.idPrestamo) as cantidadPrestamos
+    FROM prestamos
+    INNER JOIN docentes ON prestamos.cedulaDocente = docentes.cedulaDocente
+    GROUP BY prestamos.cedulaDocente
+""")
+    fun obtenerCantidadPrestamosPorDocente(): List<ReportModels.ReporteDocentePrestamos>
+
+    @Query("""
+    SELECT implementos.nombre as nombreImplemento, COUNT(prestamos.idPrestamo) as cantidadPrestamos
+    FROM prestamos
+    INNER JOIN implementos ON prestamos.codigoImplemento = implementos.codigo
+    GROUP BY prestamos.codigoImplemento
+""")
+    fun obtenerCantidadPrestamosPorImplemento(): List<ReportModels.ReporteImplementoPrestamos>
+
 
 }
 

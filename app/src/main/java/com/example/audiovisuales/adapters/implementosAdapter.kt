@@ -42,7 +42,7 @@ class implementosAdapter(
 
             val builder = AlertDialog.Builder(mContext)
             builder.setTitle("Confirmación")
-            builder.setMessage("¿Estás seguro de eliminar este docente?")
+            builder.setMessage("¿Estás seguro de eliminar este implemento?")
 
             builder.setPositiveButton("Sí") { dialog, which ->
 

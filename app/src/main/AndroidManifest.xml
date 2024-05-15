@@ -13,7 +13,16 @@
         android:theme="@style/Theme.Audiovisuales"
         tools:targetApi="31">
         <activity
+            android:name=".appInside.reportes.ReportesImplemento"
+            android:exported="false" />
+        <activity
+            android:name=".appInside.reportes.ReportesDocente"
+            android:exported="false" />
+        <activity
             android:name=".appInside.reportes.ReportesMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".appInside.reportes.ReportesDia"
             android:exported="false" />
         <activity
             android:name=".appInside.implementos.implementosMainActivity"

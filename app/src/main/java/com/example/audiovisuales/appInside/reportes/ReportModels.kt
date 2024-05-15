@@ -5,4 +5,15 @@ class ReportModels {
         val diaSemana: String?,
         val cantidad: Int
     );
+
+    data class ReporteDocentePrestamos(
+        val nombreDocente: String,
+        val cantidadPrestamos: Int
+    )
+
+    data class ReporteImplementoPrestamos(
+        val nombreImplemento: String,
+        val cantidadPrestamos: Int
+    )
+
 }

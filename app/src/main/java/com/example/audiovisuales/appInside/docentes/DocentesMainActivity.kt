@@ -10,12 +10,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.audiovisuales.Configuracion.AudiovisualesDataBase
 import com.example.audiovisuales.Entities.Docentes
-import com.example.audiovisuales.Entities.PrestamosWithDetails
 import com.example.audiovisuales.R
 import com.example.audiovisuales.adapters.docenteAdapter
-import com.example.audiovisuales.adapters.prestamoAdapter
 import com.example.audiovisuales.appInside.RegistrarDocenteActivity
-import com.example.audiovisuales.appInside.primaryActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -25,7 +22,7 @@ class DocentesMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_docentes_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.containerRepoDoc)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

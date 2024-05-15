@@ -23,4 +23,14 @@ interface ImplementosDAO {
 
     @Query("DELETE FROM implementos WHERE codigo= :codigoInput")
     fun borrarImplemento(codigoInput: Long)
+
+    @Query("""
+    SELECT * FROM implementos
+    WHERE codigo NOT IN (
+        SELECT DISTINCT codigoImplemento FROM prestamos
+        WHERE estado = 0 
+    )
+""")
+    fun seleccionarImplementosDisponibles(): List<Implementos>
+
 }

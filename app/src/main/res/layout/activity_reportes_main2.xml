@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerRepoDoc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#BAFFFFFF"
+    tools:context=".appInside.reportes.ReportesMainActivity">
+
+    <Button
+        android:layout_width="277dp"
+        android:layout_height="270dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="584dp"
+        android:backgroundTint="@color/primary_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="339dp"
+        android:layout_height="339dp"
+        android:layout_marginTop="572dp"
+        android:layout_marginEnd="108dp"
+        android:backgroundTint="@color/second_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="360dp"
+        android:layout_height="358dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="604dp"
+        android:backgroundTint="@color/primary_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:layout_width="285dp"
+        android:layout_height="292dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="656dp"
+        android:backgroundTint="@color/second_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="112dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uniminuto_logo" />
+
+    <Button
+        android:id="@+id/btnRepoDia"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="308dp"
+        android:backgroundTint="@color/second_blue"
+        android:text="Frecuencia Dia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="257dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="5dp"
+        android:text="Aqui podras consultar la frecuencia de prestamos segun cada dia de la semana"
+        android:textColor="#E8000000"
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnRepoDia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="257dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="5dp"
+        android:text="Aqui podras consultar la frecuencia de prestamos por docente"
+        android:textColor="#E8000000"
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnRepoDocentes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="257dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="5dp"
+        android:text="Aqui podras consultar la frecuencia de prestamos por implemento"
+        android:textColor="#E8000000"
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnRepoImplementos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnBackToMenuRepor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <Button
+        android:id="@+id/btnRepoDocentes"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="55dp"
+        android:backgroundTint="@color/second_blue"
+        android:text="Frecuencia Docentes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRepoDia" />
+
+    <Button
+        android:id="@+id/btnRepoImplementos"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="55dp"
+        android:backgroundTint="@color/second_blue"
+        android:text="Frecuencia Implemento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRepoDocentes" />
+</androidx.constraintlayout.widget.ConstraintLayout>
