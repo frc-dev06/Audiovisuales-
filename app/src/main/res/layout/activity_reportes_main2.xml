@@ -22,7 +22,7 @@
         android:layout_height="339dp"
         android:layout_marginTop="572dp"
         android:layout_marginEnd="108dp"
-        android:backgroundTint="@color/second_blue"
+        android:backgroundTint="@color/primary_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -136,4 +136,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRepoDocentes" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="168dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:text="Consulta rapido..."
+        android:textColor="#000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnReportPDF"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="55dp"
+        android:text="Reporte completo PDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRepoImplementos" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -73,4 +73,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeCloseDrawable" />
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="345dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="224dp"
+        android:text="Frecuencia de prestamos por docente"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
